@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "test": "lerna run test"
+    "build": "lerna run build",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
+    "release": "lerna exec --concurrency 1 -- npx --no-install semantic-release -e semantic-release-monorepo"
   },
   "devDependencies": {
     "lerna": "^3.10.5"
